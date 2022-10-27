@@ -16,7 +16,7 @@ public class Ping extends ListenerAdapter {
         TextChannel textChannel = (TextChannel) event.getChannel();
 
         if(args[0].equalsIgnoreCase(DevBot.prefixMap.get(event.getGuild().getId())+"ping")){
-            textChannel.sendMessage("`Minha conexão divina esta em "+ DevBot.jda.getGatewayPing() + "ms`").queue();
+            textChannel.sendMessage("```INI\n[Minha conexão divina esta em "+ DevBot.jda.getGatewayPing() + "ms]```").queue();
         }
     }
 }

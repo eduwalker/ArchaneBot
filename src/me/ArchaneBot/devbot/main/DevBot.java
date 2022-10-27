@@ -37,7 +37,7 @@ public class DevBot {
         JDA jda = JDABuilder.create("MTAyMTUzNjczNTA0MzI1NjQyMA.GDvjHz.bc7_5xGsHrntFNm5HIHcDEVTLZGj74n25yFIM4",
          GatewayIntent.GUILD_MEMBERS, GatewayIntent.GUILD_PRESENCES, GatewayIntent.GUILD_MESSAGES).build();*/
 
-         jda = JDABuilder.create("MTAyMTUzNjczNTA0MzI1NjQyMA.GDvjHz.bc7_5xGsHrntFNm5HIHcDEVTLZGj74n25yFIM4",
+         jda = JDABuilder.create("MTAyMTUzNjczNTA0MzI1NjQyMA.Gd9xCY.dyLJblFYSRE1QQ-Ivv7BLla0Py86m_xT5N50sE",
                 EnumSet.allOf(GatewayIntent.class)).build();
 
 //        Lista de eventos adicionados
