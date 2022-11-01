@@ -1,5 +1,6 @@
 package me.ArchaneBot.devbot.main;
 
+import kotlin.text.Charsets;
 import me.ArchaneBot.devbot.commands.Cargos;
 import me.ArchaneBot.devbot.commands.Prefix;
 import me.ArchaneBot.devbot.dataBase.CRUD;
@@ -11,9 +12,16 @@ import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.requests.GatewayIntent;
+import org.apache.logging.log4j.core.util.FileUtils;
+import org.apache.logging.log4j.core.util.IOUtils;
 
 import javax.security.auth.login.LoginException;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.sql.SQLException;
 import java.util.EnumSet;
 import java.util.HashMap;
@@ -37,7 +45,11 @@ public class DevBot {
         JDA jda = JDABuilder.create("MTAyMTUzNjczNTA0MzI1NjQyMA.GDvjHz.bc7_5xGsHrntFNm5HIHcDEVTLZGj74n25yFIM4",
          GatewayIntent.GUILD_MEMBERS, GatewayIntent.GUILD_PRESENCES, GatewayIntent.GUILD_MESSAGES).build();*/
 
-         jda = JDABuilder.create("MTAyMTUzNjczNTA0MzI1NjQyMA.Gd9xCY.dyLJblFYSRE1QQ-Ivv7BLla0Py86m_xT5N50sE",
+
+
+
+
+         jda = JDABuilder.create(System.getenv("BOT_TOKEN"),
                 EnumSet.allOf(GatewayIntent.class)).build();
 
 //        Lista de eventos adicionados
